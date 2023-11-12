@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-first-project';
+  constructor(public title: Title) {
+    this.title.setTitle('Mi título de');
+  }
+
 }
